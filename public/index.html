@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cute Chatbot — Chat</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand">💕 Cute Chatbot</div>
+      <div class="sidebar-info">
+        <p>Giao diện demo giống ChatGPT. Đăng nhập để bắt đầu.</p>
+        <button id="btn-logout" class="btn small hidden">Đăng xuất</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <h1 id="title">Chat với AI dễ thương</h1>
+        <div class="user-area">
+          <span id="username" class="username">Khách</span>
+          <button id="btn-open-login" class="btn">Đăng nhập</button>
+        </div>
+      </header>
+
+      <section class="chat-area">
+        <div id="messages" class="messages"></div>
+        <div id="typing" class="typing hidden">AI đang gõ<span class="dots">...</span></div>
+      </section>
+
+      <form id="composer" class="composer" autocomplete="off">
+        <input id="input" type="text" placeholder="Viết tin nhắn rồi nhấn Enter..." />
+        <button id="send" class="btn primary">Gửi</button>
+      </form>
+    </main>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <h2>Đăng nhập</h2>
+      <p>Nhập email để đăng nhập (demo, chấp nhận mọi email)</p>
+      <input id="login-email" type="email" placeholder="you@example.com" />
+      <input id="login-name" type="text" placeholder="Tên hiển thị (tùy chọn)" />
+      <div class="modal-actions">
+        <button id="login-submit" class="btn primary">Đăng nhập</button>
+        <button id="login-cancel" class="btn">Hủy</button>
+      </div>
+      <small class="note">Ghi chú: đây là demo. Để production, tích hợp OAuth hoặc hệ thống xác thực an toàn.</small>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
