@@ -1,0 +1,27 @@
+{
+  "name": "cute-chatbot",
+  "description": "Cute AI Chatbot using Google Gemini API",
+  "repository": "https://github.com/maicuti131/Chat-server",
+  "keywords": ["chatbot", "gemini", "node", "express"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "GOOGLE_API_KEY": {
+      "description": "Google Gemini API Key from https://aistudio.google.com/app/apikey",
+      "required": true
+    },
+    "PORT": {
+      "description": "Server port",
+      "value": "3000",
+      "required": false
+    },
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production",
+      "required": false
+    }
+  }
+}
